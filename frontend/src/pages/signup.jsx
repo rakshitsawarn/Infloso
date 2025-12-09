@@ -114,7 +114,7 @@ export default function Signup() {
             <div className="w-full max-w-2xl p-6 bg-white shadow-2xl rounded-2xl sm:p-8 lg:p-10">
                 <div className="mb-6 text-center">
                     <h1 className="mb-2 text-3xl font-bold text-gray-900 sm:text-4xl">
-                        Join MelodyVerse
+                        Join Connectverse
                     </h1>
                     <p className="text-sm text-gray-600 sm:text-base">
                         Create your account and discover endless music 🎧

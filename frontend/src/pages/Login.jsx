@@ -94,7 +94,7 @@ export default function Login() {
             <div className="w-full max-w-md p-6 bg-white shadow-2xl rounded-2xl sm:p-8 lg:p-10">
                 <div className="mb-8 text-center">
                     <h1 className="mb-2 text-3xl font-bold text-gray-900 sm:text-4xl">
-                        MelodyVerse
+                        Connectverse
                     </h1>
                     <p className="text-sm text-gray-600 sm:text-base">
                         Login to continue your music journey 🎵
