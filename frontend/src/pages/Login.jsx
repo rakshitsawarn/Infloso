@@ -68,7 +68,7 @@ export default function Login() {
                     localStorage.setItem("mv_remember", "false");
                 }
 
-                setSuccessMsg("Login successful! Redirecting...");
+                setSuccessMsg("Login successful!");
                 alert("User logged in successfully!");
 
                 setTimeout(() => {

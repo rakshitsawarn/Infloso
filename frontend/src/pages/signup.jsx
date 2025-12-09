@@ -168,7 +168,7 @@ export default function Signup() {
 
                     <div>
                         <label htmlFor="name" className="block mb-1 text-sm font-semibold text-gray-700">
-                            Full Name <span className="text-xs text-gray-400">(optional)</span>
+                            Full Name <span className="text-red-500">*</span>
                         </label>
                         <input
                             id="name"
@@ -226,7 +226,7 @@ export default function Signup() {
 
                     <div>
                         <label htmlFor="profilePic" className="block mb-1 text-sm font-semibold text-gray-700">
-                            Profile Picture <span className="text-xs text-gray-400">(optional)</span>
+                            Profile Picture <span className="text-red-500">*</span>
                         </label>
                         <input
                             id="profilePic"
