@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -168,12 +167,7 @@ export default function Login() {
                             Remember me
                         </label>
 
-                        <Link
-                            to="/forgot"
-                            className="text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
-                        >
-                            Forgot password?
-                        </Link>
+                        
                     </div>
 
                     <button

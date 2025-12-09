@@ -1,7 +1,6 @@
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 
-// Helpers
 const generateToken = (user) => {
   return jwt.sign(
     {
@@ -14,18 +13,14 @@ const generateToken = (user) => {
   );
 };
 
-// @route  POST /api/auth/signup
-// @desc   Register new user and return JWT
 export const signup = async (req, res, next) => {
   try {
     const { username, email, password, name, profilePic } = req.body;
 
-    // Basic validation
     if (!username || !email || !password) {
       return res.status(400).json({ success: false, message: "Missing fields" });
     }
 
-    // Check uniqueness
     const existingUser = await User.findOne({
       $or: [{ username }, { email: email.toLowerCase() }],
     });
@@ -35,7 +30,6 @@ export const signup = async (req, res, next) => {
         .json({ success: false, message: "Username or email already in use" });
     }
 
-    // Create user (password is hashed by model pre-save hook)
     const user = await User.create({
       username,
       email: email.toLowerCase(),
@@ -65,8 +59,6 @@ export const signup = async (req, res, next) => {
   }
 };
 
-// @route  POST /api/auth/login
-// @desc   Authenticate user and return JWT
 export const login = async (req, res, next) => {
   try {
     const { identifier, password } = req.body; // identifier can be username or email
@@ -75,7 +67,6 @@ export const login = async (req, res, next) => {
       return res.status(400).json({ success: false, message: "Missing fields" });
     }
 
-    // Find by username OR email (case-insensitive for email)
     const user = await User.findOne({
       $or: [{ username: identifier }, { email: identifier.toLowerCase() }],
     });
